@@ -16,8 +16,8 @@ for letter in a:
 
 # strings are immutable
     
-    password = "xyz"
-    print(password.isalpha())
+password = "xyz"
+print(password.isalpha())
 
-    password = "xyz23"
-    print(password.isalpha())
+password = "xyz23"
+print(password.isalpha())

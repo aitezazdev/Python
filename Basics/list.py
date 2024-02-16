@@ -30,6 +30,7 @@ print(listZAZ)
 # reverse() --> reverses the list
 # index() --> finds the index
 # count() --> counts the elemnt in list (repetiotion)
+print(listZAZ.count("me"))
 
 # List Functions
 # len(list) --> finds length of list
