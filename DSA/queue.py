@@ -14,6 +14,12 @@ class Queue:
     def size(self):
         return len(self.items)
     
+    def peek(self):
+        if not self.isEmpty():
+            return self.items[-1]
+        else:
+            print("Queue is empty. Cannot peek.")
+
     def displayQueue(self):
         for item in self.items:
             print(item, end=", ")
@@ -39,3 +45,5 @@ print("Removed item from the queue:", removed_item)
 print("Size of the queue after dequeue:", my_queue.size())
 
 print("Is the queue empty after dequeue?", my_queue.isEmpty())
+
+print("top element is", my_queue.peek())

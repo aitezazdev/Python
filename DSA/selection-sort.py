@@ -17,7 +17,7 @@ def selectionSort(my_list):
     for outer in range(len(my_list) - 1, 0, -1):
         max_pos = 0
 
-        for inner in range(1, outer + 1):
+        for inner in range(1, outer):
             if my_list[inner] > my_list[max_pos]:
                 max_pos = inner
 

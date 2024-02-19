@@ -1,49 +1,59 @@
-class Deque:
+class Node:
+    def __init__(self, initdata):
+        self.data = initdata
+        self.next = None
+
+    def getData(self):
+        return self.data
+
+    def getNext(self):
+        return self.next
+
+    def setData(self, newdata):
+        self.data = newdata
+
+    def setNext(self, newnext):
+        self.next = newnext
+
+
+class OrderedList:
     def __init__(self):
-        self.items = []
+        self.head = None
 
-    def isEmpty(self):
-        return self.items == []
+class UnorderedList:
+    def __init__(self):
+        self.head = None
 
-    def addFront(self, item):
-        self.items.append(item)
+# Create nodes
+node1 = Node(10)
+node2 = Node(20)
+node3 = Node(30)
 
-    def addRear(self, item):
-        self.items.insert(0, item)
+# Connect nodes in an unordered list
+unordered_list = UnorderedList()
+unordered_list.head = node3
+node3.next = node1
+node1.next = node2
 
-    def removeFront(self):
-        return self.items.pop()
+# Display data in the unordered list
+current = unordered_list.head
+print("unordered list is : ")
+while current is not None:
+    print(current.getData(), end=" -> ")
+    current = current.getNext()
+print("None")
 
-    def removeRear(self):
-        return self.items.pop(0)
+# Connect nodes in an ordered list
+ordered_list = OrderedList()
+ordered_list.head = node1
+node1.next = node2
+node2.next = node3
+node3.next = None
 
-    def size(self):
-        return len(self.items)
-    
-    def displayDeque(self):
-        for item in self.items:
-            print(item, end=' ')
-        print()
-
-
-my_deque = Deque()
-
-my_deque.addFront(1)
-my_deque.addRear(2)
-my_deque.addFront(3)
-my_deque.addRear(4)
-
-print("Elements of the deque:")
-my_deque.displayDeque()
-
-print("Size of the deque:", my_deque.size())
-
-removed_front = my_deque.removeFront()
-removed_rear = my_deque.removeRear()
-
-print("Removed from the front:", removed_front)
-print("Removed from the rear:", removed_rear)
-
-print("Size of the deque after removal:", my_deque.size())
-
-print("Is the deque empty?", my_deque.isEmpty())
+# Display data in the ordered list
+current = ordered_list.head
+print("Ordered list is : ")
+while current is not None:
+    print(current.getData(), end=" -> ")
+    current = current.getNext()
+print("None")
