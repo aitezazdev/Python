@@ -107,7 +107,6 @@ class UnorderedList:
             #     previous = current
             #     current = current.getNext()
 
-# Sample usage of the classes
 
 # Create nodes
 node1 = Node(10)
