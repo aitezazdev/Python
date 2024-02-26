@@ -1,3 +1,4 @@
+# simple sum program
 def listsum(numList):
     theSum = 0
     for i in numList:
